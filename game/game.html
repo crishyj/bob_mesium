@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Lunar Lander</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+    <link href="game.css" rel="stylesheet">
+    <script>
+        var WEB_SOCKET_URL = "node.seb.ly:8001";
+    </script>
+
+    <script src="libs/Vector2.js"></script>
+    <script src="libs/Stats.js"></script>
+    <script src="libs/KeyTracker.js"></script>
+    <script src="LandscapeData.js"></script>
+    <script src="InfoDisplay.js"></script>
+    <script src="Lander.js"></script>
+    <script src="libs/rAF.js">
+    </script>
+    <script src="libs/audio.js"></script>
+    <script src="libs/jsfx.js"></script>
+    <script src="libs/jsfxlib.js"></script>
+    <script src="Sounds.js"></script>
+    <script src="Sockets.js"></script>
+    <script src="TouchController.js"></script>
+    <script src="game.js"></script>
+</head>
+
+<body class="game">
+<div class="game">
+    <div class="linkBox">
+        Part of the <a href="http://seb.ly/lunar-trails">Lunar Trails</a> art project
+    </div>
+    <div class="seblyBox">
+        <a href="http://twitter.com/seb_ly">SEB.LY</a>
+    </div>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-809606-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+    window.addEventListener("message", function (event) {
+
+        var message = "" + event.data;
+        message = message.split(" ");
+
+        KeyTracker.keysPressed[event.data] = true;
+        if (event.data == "38") {
+            lander.thrust(1);
+            lander.update();
+        }
+        if (message[0] == "stop") {
+
+            KeyTracker.keysPressed[message[1]] = false;
+            if (message[1] == "38") {
+                lander.thrust(0);
+                lander.update();
+            }
+        }
+    });
+</script>
+
+</html>

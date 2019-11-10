@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TANDY Computers</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="application-name" content="PET 2001" />
+    <meta property="og:image" content="commodore/PET2001preview.jpg" />
+    <meta name="twitter:image" content="commodore/PET2001preview.jpg" />
+    <link rel="image_src" href="commodore/PET2001preview.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="PET 2001" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <link rel="apple-touch-icon" sizes="152x152" href="commodore/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="commodore/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="commodore/apple-touch-icon-167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="commodore/apple-touch-icon-180x180.png" />
+
+    <script type="text/javascript" defer src="commodore/js/cpu6502c9d0.js?v=2017-04-02"></script>
+    <script type="text/javascript" defer src="commodore/js/petkeys3113.js?v=2017-11-25"></script>
+    <script type="text/javascript" defer src="commodore/js/pet2001romsc9d0.js?v=2017-04-02"></script>
+    <script type="text/javascript" defer src="commodore/js/pet2001hwc9d0.js?v=2017-04-02"></script>
+    <script type="text/javascript" defer src="commodore/js/pet2001ieeec9d0.js?v=2017-04-02"></script>
+    <script type="text/javascript" defer src="commodore/js/pet2001io9ad2.js?v=2017-10-27"></script>
+    <script type="text/javascript" defer src="commodore/js/pet2001video660a.js?v=2018-01-18b"></script>
+    <script type="text/javascript" defer src="commodore/js/pet20017e99.js?v=2017-06-23"></script>
+    <script type="text/javascript" defer src="commodore/js/utilsc8dd.js?v=2017-12-31"></script>
+    <script type="text/javascript" defer src="commodore/js/pet2001main660a.js?v=2018-01-18b"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript">
+        function toggleHints() {
+            var el = document.getElementById('hints');
+            el.hidden = !el.hidden;
+        }
+
+        function toggleOverlay() {
+            var el = document.getElementById('imgoverlay');
+            el.hidden = !el.hidden;
+        }
+    </script>
+    <style>
+        .gamecontrol {
+            width: 100%;
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-slider">
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="logo"><img src="images/logo.png" /></div>
+                            <div class="bodytext">
+                                <h2>Commodore PET (1977) </h2>
+                                <h3>CPU: 1MHz MOS 6502<br /> RAM: 4K-96K <br /> Price: $795
+                                    <br /></h3>
+                                <p>
+                                    The Commodore PET (Personal Electronic Transactor) is a line of home/personal computers produced starting in 1977 by Commodore International. A top-seller in the Canadian and United States educational markets, it was the first personal computer sold to
+                                    the public and formed the basis for their entire 8-bit product line, including the Commodore 64.
+                                </p>
+
+                                <p>The first model, which was named the PET 2001, was presented to the public at the Winter Consumer Electronics Show in 1977. Its 6502 processor controlled the screen, keyboard, cassette tape recorders and any peripherals
+                                    connected to one of the computer's several expansion ports. The PET 2001 included either 4 KB (2001-4) or 8 KB (2001-8) of 8-bit RAM, and was essentially a single-board computer with discrete logic driving a small built-in
+                                    monochrome monitor with 40×25 character graphics, enclosed in a sheet metal case that reflected Commodore's background as a manufacturer of office equipment.
+
+                                </p>
+                                <p>The machine also included a built-in Datasette for data storage located on the front of the case, which left little room for the keyboard. The data transfer rate to cassette tape was 1500 baud, but the data was recorded
+                                    to tape twice for safety, giving an effective rate of 750 baud. The computer's main board carried four expansion ports: extra memory, a second cassette tape recorder interface, a parallel ("user") port which could be
+                                    used for sound output or connection to "user" projects or non-Commodore devices and a parallel IEEE-488 port which allowed for daisy-chaining peripherals such as disk drives and printers.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pic"><img src="images/pet.jpg" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div id="outside">
+                            <h1>&nbsp;</h1>
+                            <div id="hints" hidden="">
+                                <p><em>The Virtual Keyboard</em><br>The keyboard graphic responds to mouse clicks, touch events, and key presses. Hold your shift key while clicking the PET keyboard to get the graphics characters or use the toggling shift
+                                    keys on the virtual keyboard.
+                                    <br> (The emulator simulates pressing the PET's left shift-key at the same time as the clicked key.)<br>Using a real keyboard, the TAB key substitutes the up-arrow key of the PET and ALT/option + TAB the left-arrow
+                                    key.
+                                </p>
+                                <p><em>Keyboard Modes</em><br>There are two keyboard modes to be selected from the respective pop-up menu below the virual screen: One for editing, featuring emulated key repeat and convenient touch interaction, and a games
+                                    mode, featuring an immediate keyboard response and multi-touch interaction as suitable for playing games games.</p>
+                                <p><em>Active Cursor Positioning</em><br> Activate the checkbox "Touch-Cursor" for positioning the cursor freely on the screen by touches or clicks, while in edit mode. Especially useful for touch operated devices, like tablets,
+                                    or for editing screen graphics.<br> Please note that this may result in unintended effects with programs that turn on the cursor while waiting for an INPUT or a GET statement. Hence, best disable this option while running
+                                    a program.</p>
+                                <p><em>Loading and Saving Programs</em><br>The emulator has an IEEE-488 device attached at address 8, which can be used to load and save (.prg) files.<br>To load program files that are on your local disk, first select the
+                                    file with the browse button. Then type <em style="white-space: nowrap;">LOAD "NAME",8</em> into the PET. To save a program, type <em style="white-space: nowrap;">SAVE "NAME",8</em> and then you'll be prompted to save
+                                    the file.<br>You may also <em>drag and drop</em> a .prg or .pet file onto the virtual PET's screen to load and auto-run the respective program.<br>(Note that IEEE-488 doesn't work very well with ROM version 1.)</p>
+                                <p>Alternatively, you may also export a BASIC program currently in RAM as a binary PRG-file or as a portable source file in text format (converting any non-ASCII characters to CHR$-commands) by means of the "Export" menu.
+                                    However, this will not be handled by the emulated PET, but by the emulator itself.</p>
+                                <p>D64-disk images may be mounted either by the file-input or by drag-and-drop. The emulator will parse the disk image and present a file dialog to chose from. (You may bring up this dialog again by clicking the button "Disk
+                                    Directory", shown to the left of the file-input button, once a disk image has been loaded.)</p>
+                                <p>Finally, you may load or drag-and-drop text-files (with extensions .txt, .ba, .bas) of BASIC source text. The emulator will generate a tokenized BASIC program and load it into memory, but will not run it automatically.
+                                    The source code may be either in lower case or in upper case (or even mixed). The usual abbreviations for commands are recognized (works best in lower case source texts).</p>
+                                <p>Some PET games with hot-links to run them in this emulation can be found in this <a href="https://museum.syssrc.com/album/commodore/prgs/index.html" style="font-weight: bold;">file list</a>.<br>A large collection of .prg
+                                    programs is to be found at <a href="http://www.zimmers.net/anonftp/pub/cbm/pet/ALLFILES.html" target="_blank" rel="noopener">www.zimmers.net/anonftp/pub/cbm/pet/ALLFILES.html</a>. Take a look under demos/Cursor/ and
+                                    games/.
+                                </p>
+                                <p><em>ROMs and RAM</em><br>Some programs don't run on ROM1 or require more memory.<br>Changing the size of memory or changing the ROM version forces a reset of the PET.</p>
+                                <p><em>Exporting Screen or Memory</em><br>Select an item from the "Export" menu to export any screen or memory contents.<br> The screen may be exported as:<br> — Unicode text, ready for copy-and-paste (mind that there isn't
+                                    a Unicode equivalent for every PET character),<br> — a PNG image (with margins or without),<br> — a printer hard-copy (PNG image, dot-matrix style, black on white),<br> — a hex-dump of the screen memory,<br> — a BASIC
+                                    program that will reproduce what is currently shown on the screen.<br> BASIC memory may be either exported as a listing in portable text format, converting any special characters in strings or PRINT-statements to CHR$(...)-sequences,
+                                    as a hex-dump, or as a binary PRG-file.<br>Arbitrary memory ranges may be exported either as a hex-dump or in 6502 disassembly (both limited to the ranges of RAM and ROM).</p>
+                                <p style="text-align: center; margin-top: 1em;"><input type="button" value="Hide" onclick="toggleHints(); return false;"></p>
+                            </div>
+                            <div id="petvid"><canvas id="petscreen" width="650" height="410" style="background-color: rgb(51, 51, 51); width: 650px; height: 410px; margin-left: 20px;"></canvas></div>
+                            <div id="controls" class="notranslate">
+                                <input type="button" value="Help" onclick="toggleHints(); return false;">
+                                <input type="button" onclick="resetButton(); return false;" id="resetbutton" value=" Reset ">
+
+                                <input type="button" onclick="pauseButton(); return false;" id="pausebutton" value=" Pause ">
+
+                                <select class="gap" onchange="petExport(this); return false;" id="exportselect">
+                                <option value="" selected="">Export</option>
+                                <optgroup label="Screen">
+                                    <option value="screen as text">Screen Text as Unicode</option>
+                                    <option value="image">Screen as Image</option>
+                                    <option value="image marginless">Screen as Image, No Margins</option>
+                                    <option value="hardcopy">Screen as Printer Hard-Copy</option>
+                                    <option value="screen as hex" title="Generates a hex-dump of the screen memory. May come handy for assembler data.">Screen Memory as Hex-Dump</option>
+                                    <option value="screen as basic" title="Generates a portable BASIC program that will reproduce the contents currently on the screen by PRINT statements.">Generate BASIC Program</option>
+                                </optgroup>
+                                <optgroup label="Memory">
+                                    <option value="list basic" title="Exports a BASIC listing where any PETSCII characters are translated to CHR$-expressions. Perfect for drag-and-drop operations.">BASIC as Portable Listing</option>
+                                    <option value="hex-dump basic" title="Hex-dump of the BASIC program in memory. Inspect BASIC code or look up memory ranges.">BASIC as Hex-Dump</option>
+                                    <option value="hex-dump">Memory Range as Hex-Dump</option>
+                                    <option value="disassembly">Memory Range as Disassembly</option>
+                                    <option value="basic as prg" title="Export the BASIC program currently in memory as a PRG-file.">Save BASIC as PRG-File</option>
+                                </optgroup>
+                            </select>
+
+                                <select class="gap" onchange="setColor(this.options[this.selectedIndex].value);" id="screencolor">
+                                <option value="green" selected="">Screen: Green</option>
+                                <option value="white">Screen: White</option>
+                            </select>
+
+                                <select onchange="setKeyRepeat(this.options[this.selectedIndex].value===true);" id="keyrepeat">
+                                <option value="true" selected="" title="Key repeat emulation: on (ideal for editing)">Keyboard: Editing</option>
+                                <option value="false" title="Key repeat emulation: off (ideal for games)">Keyboard: Games</option>
+                            </select>
+
+                                <select onchange="romSelection();" id="romselection">
+                                <option value="1">ROM1</option>
+                                <option value="2" selected="">ROM2</option>
+                            </select>
+
+                                <select onchange="ramsizeSelection();" id="ramselection">
+                                <option value="8" selected="">RAM: 8K</option>
+                                <option value="16">RAM: 16K</option>
+                                <option value="32">RAM: 32K</option>
+                            </select><br>
+                                <input type="checkbox" id="cbxTouchCursor" onchange="observeScreenClicks(this.checked);">
+                                <label for="cbxTouchCursor" title="Position the cursor freely on the screen by clicks or touches">Touch-Cursor</label>
+                                <input type="button" onclick="showPrgLibrary(prgs/index.html, event.shiftKey || event.ctrlKey || event.metaKey); return false;" id="prgbutton" value=" Prg Library " title="Show a list of programs to load and run.">
+                                <input type="button" sytle="gap" onclick="Utils.D64.displayDirectory();" id="directorybutton" hidden="" value=" Disk Directory " title="Show the disk directory ...">
+                                <label>Mount file:</label>
+                                <input type="file" id="loadfile" onchange="loadFile();">
+                            </div>
+                            <div id="petkey" onmousedown="PetKeys.petkeyOnMouseDown(this, event);" onmouseup="PetKeys.petkeyOnMouseUp(this, event);" onmouseout="PetKeys.petkeyOnMouseOut();"></div>
+                            <div id="credits">
+                                <em></em>
+                                <br><br><br><br><br> PET keyboard image (SVG, rerendered to PNG) by Lovelac7, 2008, Wikimediaet="_blank" rel="noopenerCreative Commons<br /> Revised interface, screen emulation, input and output handling, as well as import
+                                and export features by Norbert Landsteiner, 2017, Bob Roswell, System Source Computer Museum
+                            </div>
+
+                            <div id="textexport" hidden="">
+                                <div id="textexportContent">
+                                    <p id="textexportTitle"></p>
+                                    <p id="memexportCtrl">
+                                        <select id="memexportType">
+                                        <option value="hex-dump">Hex-Dump</option>
+                                        <option value="disassembly">Disassemble</option>
+                                    </select>
+                                        <label for="memexportStart">From (HHLL):</label><input type="text" size="5" maxlength="4" id="memexportStart" onkeyup="if (event.keyCode==13) updateTextExport();">
+                                        <label for="memexportEnd">To (HHLL):</label><input type="text" size="5" maxlength="4" id="memexportEnd" onkeyup="if (event.keyCode==13) updateTextExport();">
+                                        <input type="button" value="Generate" onclick="updateTextExport(); return false;">
+                                    </p>
+                                    <textarea id="textclipboard" rows="25" cols="50"></textarea>
+                                    <p><input type="button" value="Hide" onclick="hideTextExport(); return false;"></p>
+                                </div>
+                            </div>
+                            <div id="diskdirectory" hidden="">
+                                <div id="diskdirectoryContent">
+                                    <p style="text-align: center;">Disk: <span id="directoryTitle"></span></p>
+                                    <div id="directoryList"></div>
+                                    <p><input type="checkbox" id="diskdirectory_cbx_reset" style="margin-right: 0.75em;"><label for="diskdirectory_cbx_reset">reset</label><input type="checkbox" id="diskdirectory_cbx_autorun" checked="" style="margin-left: 1.25em;margin-right: 0.75em;">
+                                        <label for="diskdirectory_cbx_autorun">auto-run</label>
+                                        <span style="float: right;"><label for="diskdirectory_ram" style="margin-right: 0.25em">min. RAM:</label><select id="diskdirectory_ram">
+                                    <option value="8" selected="">8K</option>
+                                    <option value="16">16K</option>
+                                    <option value="32">32K</option>
+                                </select></span></p>
+                                    <p style="text-align: center; clear: both;"><input type="button" value="Cancel" onclick="closeDirectoryList();"> &nbsp; <input type="button" value="Load" onclick="loadSelectedDirectoryIndex(diskdirectory_cbx_autorun.checked, diskdirectory_cbx_autorun.checked);"></p>
+                                </div>
+                            </div>
+                            <div id="downloadlink" hidden="">
+                                <div id="downloadlinkContent">
+                                    <p id="downloadlinkParent"></p>
+                                    <p style="text-align: center"><input type="button" value="Done" onclick="document.getElementById(downloadlink).hidden=true;"></p>
+                                </div>
+                            </div>
+                            <div id="srcexport" hidden="">
+                                <div id="srcexportContent">
+                                    <p id="srcexportCtrl">
+                                        <label for="srcexportLineNumber">Line Number:</label> <input id="srcexportLineNumber" type="number" value="1000" step="10">
+                                        <label for="srcexportLineStep">Step:</label> <input id="srcexportLineStep" type="number" value="10" step="1">
+                                        <input type="checkbox" checked="" id="srcexportUpperCase"> <label for="srcexportUpperCase">Upper Case Source Code</label>
+                                        <input type="checkbox" checked="" id="srcexportTrim"> <label for="srcexportTrim">Trim White-Space</label>
+                                        <input type="button" value="Generate" onclick="generateScreenAsProgram();">
+                                    </p>
+                                    <textarea id="srcexportClipboard" rows="25" cols="85"></textarea>
+                                    <p style="text-align: center"><input type="button" value="Hide" onclick="hideScreenAsProgram();"></p>
+                                </div>
+                            </div>
+                            <div id="imgexport" hidden="">
+                                <div id="imgexportContent">
+                                    <p>Drag or right-click to save</p>
+                                    <p id="imgexportRoot"></p>
+                                    <p><input type="button" value="Hide" onclick="hideImageExport(); return false;"></p>
+                                </div>
+                            </div>
+                            <div id="prglibrary" hidden="">
+                                <div id="prglibrary_wrapper">
+                                    <input id="prglibrary_ctrl" type="button" value="Hide Library" onclick="hidePrgLibrary(); return false;">
+                                    <div id="prglibrary_contents_wrapper">
+                                        <iframe id="prglibrary_contents" src="js/saved_resource.html">Loading...</iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="game">
+                            <iframe src="game/game.html" frameborder="0" class="gamecontrol" name="gamecontrol"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="item active" id="thumb1">
+                        <div data-target="#carousel" data-slide-to="0" class="thumb">
+                            <img src="images/01model1.png">
+                            <span>
+                                PET 1977
+                            </span>
+                        </div>
+
+                        <div data-target="#carousel" data-slide-to="1" class="thumb">
+                            <img src="commodore/PET2001min.png">
+                            <span>
+                                PET 2001
+                            </span>
+                        </div>
+                        <div data-target="#carousel" data-slide-to="2" class="thumb">
+                            <img src="commodore/PET2001min.png">
+                            <span>
+                                GAME
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item" id="thumb2">
+                        <div data-target="#carousel" data-slide-to="0" class="thumb">
+                            <img src="images/01model1.png">
+                            <span>
+                                        TRS-80 Model1
+                                    </span>
+                        </div>
+
+                        <div data-target="#carousel" data-slide-to="1" class="thumb">
+                            <img src="images/02model2.png">
+                            <span>
+                                        TRS-80 Model2
+                                    </span>
+                        </div>
+                        <div data-target="#carousel" data-slide-to="2" class="thumb">
+                            <img src="commodore/PET2001min.png">
+                            <span>
+                                GAME
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </a>
+                <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/keyevent.js"></script>
+
+</html>

@@ -1,0 +1,163 @@
+.content-slider li {
+    background-color: #ed3020;
+    text-align: center;
+    color: #FFF;
+}
+
+.content-slider h3 {
+    margin: 0;
+    padding: 70px 0;
+}
+
+.demo {
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Asap-Regular';
+    src: url('../fonts/webfonts/asap/Asap-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Asap-Bold';
+    src: url('../fonts/webfonts/asap/Asap-Bold.ttf');
+}
+
+body {
+    margin: 0;
+    background-color: #112233;
+    color: #fff;
+    font: normal 20px Asap-Bold, Helvetica, Arial, sans-serif;
+}
+
+.logo img {
+    width: 500px;
+}
+
+.right img {
+    width: 100%;
+}
+
+.lSGallery {
+    background: #224466 !important;
+    position: fixed;
+    bottom: 0;
+}
+
+.logo {
+    padding-left: 40px;
+}
+
+.bodytext {
+    padding-left: 40px;
+}
+
+.pic {
+    padding-right: 40px;
+}
+
+.pic img {
+    width: 100%;
+}
+
+.lSGallery li {
+    text-align: center;
+    height: 225px;
+}
+
+.lSGallery li a {
+    text-decoration: none;
+    color: white;
+}
+
+.lSGallery li:hover {
+    background: #FFF !important;
+    color: black;
+}
+
+.lSGallery li a:hover {
+    color: black;
+}
+
+.lSSlideOuter .lSPager.lSGallery img {
+    height: 160px !important;
+}
+
+.lSAction>a {
+    width: 32px;
+    display: block;
+    top: 110%;
+    height: 32px;
+    background-image: url(../img/controls.png);
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    margin-top: -16px;
+    opacity: 1;
+    -webkit-transition: opacity 0.35s linear 0s;
+    transition: opacity 0.35s linear 0s;
+}
+
+.lSSlideWrapper {
+    max-width: 100%;
+    overflow: hidden;
+    position: inherit;
+    height: 0;
+}
+
+.lSSlideOuter .lSPager.lSGallery {
+    height: 20vh;
+}
+
+.carousel-indicators li {
+    background-color: #11223300;
+}
+
+.carousel-inner {
+    height: 80vh;
+}
+
+#image-gallery {
+    width: 0;
+}
+
+@media(max-width:768px) {
+    .lSSlideWrapper {
+        position: relative;
+        height: auto;
+    }
+    .logo img {
+        width: 300px;
+    }
+    .lSGallery {
+        background: #224466 !important;
+        position: relative;
+        bottom: 0;
+    }
+    .logo {
+        padding-left: 0px;
+    }
+    .bodytext {
+        padding-left: 0px;
+    }
+    .pic {
+        padding-right: 0px;
+    }
+    .lSAction>a {
+        width: 32px;
+        display: block;
+        top: 99%;
+        height: 32px;
+        background-image: url(../img/controls.png);
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        margin-top: -16px;
+        opacity: 1;
+        -webkit-transition: opacity 0.35s linear 0s;
+        transition: opacity 0.35s linear 0s;
+    }
+    .lSSlideOuter .lSPager.lSGallery img {
+        height: 140px !important;
+    }
+}
